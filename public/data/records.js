@@ -1,15 +1,14 @@
 module.exports = [
   {
     id: "aada6b50-1d50-4d00-9c57-500b79a9e5f5",
-    text1:
-      "<i>Tüm planladığın dağ yürüyüşü gibi\r\nşeyleri yaparak değil.</i>\r\n",
+    text1: "<i>Tüm planladığın dağ yürüyüşü gibi\r\nşeyleri yaparak değil.</i>\r\n",
     text2: "Not all the hiking up mountain\r\nstuff that you are planning.\r\n",
     status: 0,
     documentId: "c4d36466-b58b-40bf-a986-d72ba9da312b",
     comments: null,
     configuration: null,
     tags: null,
-    bookmarks: 0,
+    bookmarked: false,
   },
   {
     id: "05cb796c-3a3a-40f7-a929-1b4834a25bd2",
@@ -20,7 +19,7 @@ module.exports = [
     comments: null,
     configuration: null,
     tags: null,
-    bookmarks: 0,
+    bookmarked: false,
   },
   {
     id: "78abbbc1-0b36-4a60-8e26-828cb2bd28ca",
@@ -31,7 +30,7 @@ module.exports = [
     comments: null,
     configuration: null,
     tags: null,
-    bookmarks: 0,
+    bookmarked: false,
   },
   {
     id: "7154d6d5-2a78-40ea-b978-cdbf77ee158d",
@@ -42,7 +41,7 @@ module.exports = [
     comments: null,
     configuration: null,
     tags: null,
-    bookmarks: 0,
+    bookmarked: false,
   },
   {
     id: "109b6ada-6d0f-4697-b0af-6513e761da0c",
@@ -53,7 +52,7 @@ module.exports = [
     comments: null,
     configuration: null,
     tags: null,
-    bookmarks: 0,
+    bookmarked: false,
   },
   {
     id: "584032c3-6752-4d6f-851a-c454a7229269",
@@ -64,7 +63,7 @@ module.exports = [
     comments: null,
     configuration: null,
     tags: null,
-    bookmarks: 0,
+    bookmarked: false,
   },
   {
     id: "4c0b9c75-8af6-4f8e-8f8a-f2f3baeb7de6",
@@ -75,19 +74,18 @@ module.exports = [
     comments: null,
     configuration: null,
     tags: null,
-    bookmarks: 0,
+    bookmarked: false,
   },
   {
     id: "9486ae3b-15e1-4841-89d6-c7d3c2099139",
-    text1:
-      "Batı yakasında henüz saat geç değil. Hemen\r\nCarmichael'ı ararım ve bu işi bitirebiliriz.\r\n",
+    text1: "Batı yakasında henüz saat geç değil. Hemen\r\nCarmichael'ı ararım ve bu işi bitirebiliriz.\r\n",
     text2: "I'll call Carmichael now,\r\nand we can close this.\r\n",
     status: 0,
     documentId: "c4d36466-b58b-40bf-a986-d72ba9da312b",
     comments: null,
     configuration: null,
     tags: null,
-    bookmarks: 0,
+    bookmarked: false,
   },
   {
     id: "45c46b44-cb51-4f79-8acb-7535e1bc2f36",
@@ -98,19 +96,18 @@ module.exports = [
     comments: null,
     configuration: null,
     tags: null,
-    bookmarks: 0,
+    bookmarked: false,
   },
   {
     id: "14557830-e5cf-4b2c-bfd0-7a65313bc846",
-    text1:
-      "<i>Senden Önce Ben</i>\r\nÇeviri: Canan Örmen & Okan Akar\r\n@cananormen & @yuriokanakar\r\n",
+    text1: "<i>Senden Önce Ben</i>\r\nÇeviri: Canan Örmen & Okan Akar\r\n@cananormen & @yuriokanakar\r\n",
     text2: "<b>Me Before You.\r\n",
     status: 0,
     documentId: "c4d36466-b58b-40bf-a986-d72ba9da312b",
     comments: null,
     configuration: null,
     tags: null,
-    bookmarks: 0,
+    bookmarked: false,
   },
   ,
 ];

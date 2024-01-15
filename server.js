@@ -3,7 +3,7 @@ const cors = require("cors");
 const fs = require("fs");
 const app = express();
 const records = require("./public/data/records.js");
-const bookmarks = require("./public/data/bookmarks.js");
+let bookmarks = require("./public/data/bookmarks.js");
 
 app.use(express.json());
 
@@ -24,16 +24,23 @@ app.delete("/files/:documentId", (req, res) => {
   res.end("Movie Removed successfully");
 });
 
+app.delete("/files/:documentId/records/:recordId", (req, res) => {
+  res.end("Subtitle Removed successfully");
+});
+
 app.get("/files/search", (req, res) => {
-  res.end("Subtitles are being processed");
+  const movieName = req.query.movieName;
+  res.end(`Subtitles are being processed for ${movieName}`);
 });
 
 app.get("/files/:documentId/records", (req, res) => {
   const documentId = req.params.documentId;
   const subtitles = records.filter((x) => x.documentId === documentId);
+  const bookmarksForDocument = bookmarks.filter((x) => x.documentId === documentId);
+  subtitles.map((x) => (bookmarksForDocument.some((y) => y.recordId === x.id) ? (x.bookmarked = true) : (x.bookmarked = false)));
   if (subtitles.length !== 0) {
     res.status(200).send(subtitles);
-  } else res.status(500).send("No movie exists!");
+  } else res.status(500).send("No subtitle exists!");
 });
 
 app.post("/files/:documentId/records/:recordId/bookmark", (req, res) => {
@@ -44,12 +51,13 @@ app.post("/files/:documentId/records/:recordId/bookmark", (req, res) => {
 
 app.delete("/files/:documentId/records/:recordId/bookmark", (req, res) => {
   const { documentId, recordId } = req.params;
-  bookmarks = bookmarks.filter(x == { documentId, recordId });
+  bookmarks = bookmarks.filter((x) => x.documentId != documentId || x.recordId != recordId);
   res.status(200).send("Bookmark removed successfully");
 });
 
 app.get("/bookmarks", (req, res) => {
-  const subtitles = records.filter((x) => bookmarks.some((y) => y.documentId == x.documentId && y.recordId == x.id)) ?? [];
+  const subtitles =
+    records.filter((x) => bookmarks.some((y) => y.documentId == x.documentId && y.recordId == x.id)).map((x) => ({ ...x, bookmarked: true })) ?? [];
   res.status(200).send(subtitles);
 });
 
